@@ -69,15 +69,15 @@ export function Sidebar({ collapsed, onToggle }: SidebarProps) {
   return (
     <aside
       className={cn(
-        'relative flex flex-col border-r border-slate-200 bg-white transition-all duration-300 z-30 select-none h-screen shrink-0',
-        collapsed ? 'w-16' : 'w-64'
+        'relative flex flex-col border-r border-[#cfd7e3] bg-[#f8fafc] transition-all duration-200 z-30 select-none h-screen shrink-0',
+        collapsed ? 'w-16' : 'w-[220px]'
       )}
     >
       {/* Brand Header */}
-      <div className="flex h-14 items-center justify-between border-b border-slate-200 px-4">
+      <div className="flex h-12 items-center justify-between border-b border-[#cfd7e3] bg-[#eef4fb] px-3">
         {!collapsed && (
           <div className="flex items-center gap-2.5 overflow-hidden">
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-600 text-white shadow-sm shrink-0">
+            <div className="flex h-7 w-7 items-center justify-center rounded-[3px] bg-[#2f66a7] text-white shadow-sm shrink-0">
               <Layers className="h-4 w-4" />
             </div>
             <div className="flex flex-col truncate">
@@ -109,7 +109,7 @@ export function Sidebar({ collapsed, onToggle }: SidebarProps) {
       </div>
 
       {/* Nav Links */}
-      <div className="flex-1 overflow-y-auto px-2 py-4 space-y-1">
+      <div className="flex-1 overflow-y-auto px-2 py-3 space-y-0.5">
         {navItems.map(item => (
           <NavLink
             key={item.to}
@@ -117,10 +117,10 @@ export function Sidebar({ collapsed, onToggle }: SidebarProps) {
             end={item.to === '/'}
             className={({ isActive }) =>
               cn(
-                'group flex items-center gap-3 rounded-md px-3 py-2 text-xs font-medium transition-colors',
+                'group flex h-9 items-center gap-2.5 rounded-[3px] px-3 text-xs font-medium transition-colors border border-transparent',
                 isActive
-                  ? 'bg-blue-50 text-blue-700 font-semibold'
-                  : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
+                  ? 'bg-[#dfeaf7] text-[#24598e] font-semibold border-[#b9cce2]'
+                  : 'text-[#455466] hover:bg-[#edf2f7] hover:border-[#d7e0ea] hover:text-[#1f344a]'
               )
             }
             title={collapsed ? item.label : undefined}

@@ -65,7 +65,7 @@ export function Header() {
 
   return (
     <>
-      <header className="h-14 border-b border-slate-200 bg-white px-6 flex items-center justify-between z-20 shrink-0">
+      <header className="h-12 border-b border-[#c8d1de] bg-white px-5 flex items-center justify-between z-20 shrink-0">
         {/* Left: Breadcrumbs */}
         <div className="flex items-center gap-2 text-xs">
           <span className="text-slate-400">BusinessFlow</span>
@@ -77,7 +77,7 @@ export function Header() {
         <div className="flex-1 max-w-md mx-6">
           <button
             onClick={() => setGlobalSearchOpen(true)}
-            className="w-full flex items-center justify-between h-8 px-3 rounded-md bg-slate-50 border border-slate-200 text-slate-400 hover:bg-slate-100 hover:border-slate-300 transition-colors text-xs"
+            className="w-full flex items-center justify-between h-8 px-3 rounded-[3px] bg-[#f8fafc] border border-[#ccd5e1] text-slate-500 hover:bg-white hover:border-[#9fb2c7] transition-colors text-xs"
           >
             <div className="flex items-center gap-2">
               <Search className="h-3.5 w-3.5" />

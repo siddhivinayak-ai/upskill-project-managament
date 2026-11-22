@@ -13,7 +13,7 @@ export function AppContent() {
   const [collapsed, setCollapsed] = useState(false);
 
   return (
-    <div className="flex h-screen w-screen overflow-hidden bg-slate-50 text-slate-900 font-sans antialiased">
+    <div className="flex h-screen w-screen overflow-hidden bg-[#eef2f7] text-slate-900 antialiased">
       {/* Collapsible Sidebar */}
       <Sidebar collapsed={collapsed} onToggle={() => setCollapsed(!collapsed)} />
 
