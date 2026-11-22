@@ -172,7 +172,7 @@ export function DataTable<T extends { id: string; [key: string]: any }>({
   const isSomeSelected = selectedIds.size > 0 && selectedIds.size < processedData.length;
 
   return (
-    <div className="flex flex-col rounded-lg border border-slate-200 bg-white shadow-xs">
+    <div className="flex flex-col rounded-[3px] border border-[#cbd5e1] bg-white">
       {/* Table Toolbar */}
       <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 p-3 border-b border-slate-200 bg-white rounded-t-lg">
         {/* Left: Search input */}
@@ -185,7 +185,7 @@ export function DataTable<T extends { id: string; [key: string]: any }>({
               setSearchTerm(e.target.value);
               setCurrentPage(1);
             }}
-            className="h-8 text-xs bg-slate-50 border-slate-200 focus:bg-white"
+            className="h-8 text-xs bg-[#f8fafc] border-[#c8d2df] focus:bg-white"
           />
         </div>
 
@@ -260,7 +260,7 @@ export function DataTable<T extends { id: string; [key: string]: any }>({
       <div className="overflow-x-auto min-h-[300px]">
         <table className="w-full text-left text-xs border-collapse">
           <thead>
-            <tr className="border-b border-slate-200 bg-slate-50/75 text-slate-600 uppercase font-semibold text-[11px] tracking-wider select-none">
+            <tr className="border-b border-[#bfcad7] bg-[#edf2f7] text-[#4b5d70] uppercase font-semibold text-[11px] select-none">
               {/* Checkbox column */}
               <th className="w-10 px-3 py-2.5 text-center">
                 <input
@@ -308,7 +308,7 @@ export function DataTable<T extends { id: string; [key: string]: any }>({
             </tr>
           </thead>
 
-          <tbody className="divide-y divide-slate-100 text-slate-700">
+          <tbody className="divide-y divide-[#dfe5ec] text-[#334155]">
             {paginatedData.length === 0 ? (
               <tr>
                 <td colSpan={activeColumns.length + 1} className="py-16 text-center">
@@ -349,7 +349,7 @@ export function DataTable<T extends { id: string; [key: string]: any }>({
                     className={`group transition-colors ${
                       isSelected
                         ? 'bg-blue-50/50 hover:bg-blue-50'
-                        : 'hover:bg-slate-50/80'
+                        : 'hover:bg-[#f3f7fb]'
                     } ${onRowClick ? 'cursor-pointer' : ''}`}
                   >
                     {/* Checkbox */}

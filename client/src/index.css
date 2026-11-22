@@ -33,9 +33,10 @@
 }
 
 body {
-  background-color: #f8fafc;
-  color: #0f172a;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: #eef2f7;
+  color: #1f2937;
+  font-family: Tahoma, "Segoe UI", Arial, sans-serif;
+  font-size: 13px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
@@ -43,18 +44,40 @@ body {
   min-height: 100vh;
 }
 
-/* Custom scrollbars for clean UI */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+button,
+.rounded,
+.rounded-md,
+.rounded-lg,
+.rounded-xl {
+  border-radius: 3px !important;
+}
+
+input,
+select,
+textarea {
+  border-radius: 3px !important;
+}
+
+/* Custom scrollbars for clean, compact operation screens */
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+  width: 8px;
+  height: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: transparent;
+  background: #f1f5f9;
 }
 ::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
-  border-radius: 3px;
+  background: #aeb8c5;
+  border: 2px solid #f1f5f9;
+  border-radius: 2px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
+  background: #8e9aaa;
 }
