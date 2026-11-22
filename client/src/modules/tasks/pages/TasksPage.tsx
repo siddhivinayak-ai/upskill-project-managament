@@ -318,23 +318,24 @@ export function TasksPage() {
       }
     >
       {/* View Selector Tabs */}
-      <div className="flex items-center gap-1 border-b border-slate-200 pb-2 overflow-x-auto">
+      <div className="flex items-center gap-1.5 border-b border-slate-200 pb-3 overflow-x-auto shrink-0">
         {viewTabs.map(tab => (
           <button
             key={tab.id}
+            type="button"
             onClick={() => setActiveTab(tab.id)}
-            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-medium transition-colors shrink-0 ${
+            className={`flex items-center gap-2 px-3.5 py-2 rounded-lg text-xs font-medium transition-all shrink-0 ${
               activeTab === tab.id
-                ? 'bg-blue-600 text-white shadow-xs font-semibold'
-                : 'text-slate-600 hover:bg-slate-200/70 hover:text-slate-900'
+                ? 'bg-blue-600 text-white shadow-sm font-semibold'
+                : 'text-slate-600 hover:bg-slate-200/80 hover:text-slate-900 bg-white border border-slate-200/60'
             }`}
           >
-            <tab.icon className="h-3.5 w-3.5" />
+            <tab.icon className="h-4 w-4" />
             <span>{tab.label}</span>
             {tab.count !== undefined && (
               <span
-                className={`ml-1 px-1.5 py-0.2 rounded-full text-[10px] font-bold ${
-                  activeTab === tab.id ? 'bg-white/20 text-white' : 'bg-slate-200 text-slate-700'
+                className={`ml-1 px-1.5 py-0.5 rounded-full text-[10px] font-bold ${
+                  activeTab === tab.id ? 'bg-white/25 text-white' : 'bg-slate-100 text-slate-700 border border-slate-200'
                 }`}
               >
                 {tab.count}

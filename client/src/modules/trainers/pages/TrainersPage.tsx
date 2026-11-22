@@ -336,16 +336,17 @@ export function TrainersPage() {
       </div>
 
       {/* Saved Reports Chips / Quick Views */}
-      <div className="flex items-center gap-2 overflow-x-auto pb-1 text-xs">
-        <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider shrink-0 flex items-center gap-1">
-          <Sparkles className="h-3 w-3 text-blue-500" /> Saved Reports:
+      <div className="flex items-center gap-2 overflow-x-auto py-1 text-xs shrink-0">
+        <span className="text-[11px] font-bold text-slate-500 uppercase tracking-wider shrink-0 flex items-center gap-1.5 mr-1">
+          <Sparkles className="h-3.5 w-3.5 text-blue-600" /> Saved Reports:
         </span>
         <button
+          type="button"
           onClick={() => handleSelectReport('')}
-          className={`px-2.5 py-1 rounded-md text-xs font-medium transition-colors shrink-0 ${
+          className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all shrink-0 ${
             activeReportId === null || activeReportId === ''
-              ? 'bg-slate-900 text-white font-semibold'
-              : 'bg-white border border-slate-200 text-slate-600 hover:bg-slate-100'
+              ? 'bg-slate-900 text-white font-semibold shadow-xs'
+              : 'bg-white border border-slate-200 text-slate-700 hover:bg-slate-100'
           }`}
         >
           All Master Trainers
@@ -354,11 +355,12 @@ export function TrainersPage() {
         {savedReports.map(rep => (
           <button
             key={rep.id}
+            type="button"
             onClick={() => handleSelectReport(rep.id)}
-            className={`px-2.5 py-1 rounded-md text-xs font-medium transition-colors shrink-0 ${
+            className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all shrink-0 ${
               activeReportId === rep.id
-                ? 'bg-blue-600 text-white font-semibold'
-                : 'bg-white border border-slate-200 text-slate-600 hover:bg-slate-100'
+                ? 'bg-blue-600 text-white font-semibold shadow-xs'
+                : 'bg-white border border-slate-200 text-slate-700 hover:bg-slate-100'
             }`}
           >
             {rep.report_name}

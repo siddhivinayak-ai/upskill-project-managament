@@ -9,9 +9,9 @@ interface PageLayoutProps {
 
 export function PageLayout({ title, description, actions, children }: PageLayoutProps) {
   return (
-    <div className="flex-1 flex flex-col min-h-0 bg-slate-50 overflow-y-auto">
+    <div className="flex-1 h-full overflow-y-auto bg-slate-50">
       {/* Top Banner */}
-      <div className="border-b border-slate-200 bg-white px-6 py-4">
+      <div className="border-b border-slate-200 bg-white px-6 py-4 shrink-0">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
           <div>
             <h1 className="text-xl font-bold tracking-tight text-slate-900">{title}</h1>
@@ -21,8 +21,8 @@ export function PageLayout({ title, description, actions, children }: PageLayout
         </div>
       </div>
 
-      {/* Main Page Area */}
-      <div className="p-6 flex-1 flex flex-col min-h-0 space-y-5">
+      {/* Main Page Area - Normal flowing layout, no flex squishing */}
+      <div className="p-6 space-y-6">
         {children}
       </div>
     </div>
